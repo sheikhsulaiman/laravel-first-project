@@ -12,5 +12,6 @@ Route::get('/about', function () {
 });
 Route::get('/contact',[ContactController::class,'index']);
 Route::get('/blogs',[BlogController::class,'index'])->name('blogs.index');
+Route::get('/blogs/{id}',[BlogController::class,'show'])->name('blogs.show');
 Route::get('/blogs/create',[BlogController::class,'create'])->name('blogs.create');
 Route::post('/blogs/store',[BlogController::class,'store'])->name('blogs.store');
